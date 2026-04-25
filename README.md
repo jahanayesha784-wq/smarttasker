@@ -285,14 +285,3 @@ Possible improvements for future versions:
 
 ---
 
-#  Author
-
-SmartTasker Project
-
-Developed as a Task Management System with modern full-stack architecture and CI/CD integration.
-
----
-
-#  License
-
-This project is created for educational and demonstration purposes.
