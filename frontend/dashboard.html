@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - SmartTasker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>🚀 SmartTasker</h2>
+  <a href="dashboard.html">📊 Dashboard</a>
+  <a href="create-task.html">➕ Create Task</a>
+  <a href="#" onclick="logout()">🚪 Logout</a>
+</div>
+
+<div class="main">
+  <h1>📊 Dashboard</h1>
+  <p class="subtitle">Manage tasks with a professional Kanban board.</p>
+
+  <div class="stats">
+    <div class="stat-card purple">
+      <h3>📌 Total Tasks</h3>
+      <p id="totalTasks">0</p>
+    </div>
+
+    <div class="stat-card blue">
+      <h3>⏳ Pending Tasks</h3>
+      <p id="pendingTasks">0</p>
+    </div>
+
+    <div class="stat-card green">
+      <h3>✅ Completed Tasks</h3>
+      <p id="completedTasks">0</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">
+      <h2>🗂 Task Board</h2>
+      <button class="small-btn" onclick="getTasks()">🔄 Refresh</button>
+    </div>
+
+    <div class="kanban-board">
+      <div class="kanban-column pending-column" ondragover="allowDrop(event)" ondrop="dropTask(event, 'Pending')">
+        <h2>⏳ Pending</h2>
+        <div id="pendingList" class="kanban-list"></div>
+      </div>
+
+      <div class="kanban-column completed-column" ondragover="allowDrop(event)" ondrop="dropTask(event, 'Completed')">
+        <h2>✅ Completed</h2>
+        <div id="completedList" class="kanban-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
